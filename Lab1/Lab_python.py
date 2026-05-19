@@ -14,6 +14,7 @@ ser.timeout=None
 ser.flushInput()
 ser.flushOutput()
 
+
 print('Ingrese un comando:\n')
 while 1 :
     char_v = []
