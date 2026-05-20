@@ -110,14 +110,7 @@ class RaisedCosineFilter:
     def get_coefficients(self):
         return self.taps
 
-"""
-filtro = RaisedCosineFilter(alpha=1, span=10, sps=10, rrc=True)
 
-coef = filtro.get_coefficients()
-print(coef)
-
-filtro.plot(time_domain=True, freq_domain=True)
-"""
 
 # Variables iniciales del filtro
 # alpha -> rolloff
@@ -131,16 +124,15 @@ sps = 10
 rrc = True
 plot_type = 1
 saved_filters = []
-comm= ""
 comment = ""
 
 
 print("\nComandos disponibles:")
-print("alpha=0.5 -> Cambia el factor roll-off del filtro")
-print("span=8 -> Cambia la cantidad de símbolos que abarca el filtro")
-print("sps=16 -> Cambia las muestras por símbolo")
-print("rrc=0  -> Cambia el tipo de filtro (0 = Raised Cosine, 1 = Root Raised Cosine)")
-print("plot=0 -> Cambia el tipo de gráfico (0 = Stem, 1 = Plot)")
+print("alpha=1 -> Cambia el factor roll-off del filtro")
+print("span=10 -> Cambia la cantidad de símbolos que abarca el filtro")
+print("sps=10 -> Cambia las muestras por símbolo")
+print("rrc=1  -> Cambia el tipo de filtro (0 = Raised Cosine, 1 = Root Raised Cosine)")
+print("plot=1 -> Cambia el tipo de gráfico (0 = Stem, 1 = Plot)")
 print("plot   -> Muestra el gráfico del filtro actual")
 print("save   -> Guarda el filtro actual con un comentario")
 print("comment=Texto -> Agrega un comentario al filtro")
