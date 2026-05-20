@@ -136,18 +136,17 @@ comment = ""
 
 
 print("\nComandos disponibles:")
-print("alpha=0.5")
-print("span=8")
-print("sps=16")
-print("rrc=0")
-print("plot=0")
-print("plot=1")
-print("plot")
-print("save")
-print("comment=Comentario del filtro")
-print("reset")
-print("compare")
-print("coef")
+print("alpha=0.5 -> Cambia el factor roll-off del filtro")
+print("span=8 -> Cambia la cantidad de símbolos que abarca el filtro")
+print("sps=16 -> Cambia las muestras por símbolo")
+print("rrc=0  -> Cambia el tipo de filtro (0 = Raised Cosine, 1 = Root Raised Cosine)")
+print("plot=0 -> Cambia el tipo de gráfico (0 = Stem, 1 = Plot)")
+print("plot   -> Muestra el gráfico del filtro actual")
+print("save   -> Guarda el filtro actual con un comentario")
+print("comment=Texto -> Agrega un comentario al filtro")
+print("reset  -> Elimina todos los filtros guardados")
+print("compare -> Compara los filtros guardados en un mismo gráfico")
+print("coef   -> Muestra los coeficientes del filtro actual")
 print("exit\n")
 
 
@@ -183,7 +182,7 @@ while 1 :
             print(f"Nuevo rrc: {rrc}")
         elif "plot=" in out:
             plot_type = int(out.split('=')[1])
-            filtro.plot(time_domain=True, freq_domain=True, plot_type=plot_type)
+            print(f"Nuevo plot_type: {plot_type}")
         elif "comment=" in out:
             comment = out.split("=")[1]
             print(f"Nuevo comentario: {comment}")
